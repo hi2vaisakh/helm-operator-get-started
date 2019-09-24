@@ -3,7 +3,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: podinfo-dev
-  namespace: dev
+  namespace: default
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: glob:dev-*
@@ -14,7 +14,5 @@ spec:
     path: charts/podinfo
     ref: master
   values:
-    image: hi2vaisakh/podinfo:1.1.1
+    image: hi2vaisakh/podinfo:dev-1234
     replicaCount: 1
-    hpa:
-      enabled: false
