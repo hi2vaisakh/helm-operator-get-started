@@ -12,6 +12,6 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: jenkins
-    version: 2.118
+    version: 2.176.1
   values:
     replicaCount: 1
