@@ -1,0 +1,17 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: jenkins-dev
+  namespace: dev
+  annotations:
+    flux.weave.works/automated: "true"
+spec:
+  releaseName: jenkins-dev
+  targetNamespace: dev
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: jenkins
+    version: 2.118
+  values:
+    replicaCount: 1
