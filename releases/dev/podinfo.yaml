@@ -14,5 +14,5 @@ spec:
     path: charts/podinfo
     ref: master
   values:
-    image: hi2vaisakh/podinfo:dev-a7nbxfxi
+    image: hi2vaisakh/podinfo:dev-63pqsvuk
     replicaCount: 1
